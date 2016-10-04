@@ -1,13 +1,9 @@
 package com.example.rhxorhkd.mylayoutinflater;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,6 +14,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onButton1Clicked(View v){
+
+        SubLayout layout1 = new SubLayout(this);
+        LinearLayout container = (LinearLayout) findViewById(R.id.container);
+        container.addView(layout1);
+
+
+        /*
         LinearLayout container = (LinearLayout) findViewById(R.id.container); // 앞에서 setcontentview 를 했으니까 여기서 찾아줄 수 잇어
         LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE); //시스템 서비스 객체를 참조할 수 있다.
         inflater.inflate(R.layout.sub_layout,container,true);  //수동으로 인플레이션 할 수있어   //첫번째 것을 두번째에 넣는거야
@@ -30,5 +33,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"부분화면의 버튼클릭됨",Toast.LENGTH_LONG).show();
             }
         });
+        */
+
     }
 }
