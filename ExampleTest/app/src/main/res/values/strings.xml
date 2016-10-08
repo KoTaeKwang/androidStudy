@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ExampleTest</string>
+    <string name="tab1">home</string>
+    <string name="tab2">check</string>
+    <string name="tab3">rank</string>
+    <string name="tab4">set</string>
+</resources>
