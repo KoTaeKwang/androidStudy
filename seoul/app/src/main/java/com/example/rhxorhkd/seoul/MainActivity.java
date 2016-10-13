@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
        // setSupportActionBar((Toolbar) findViewById(R.id.main_toolbar)); //actionbar 설정
         Button button = (Button) findViewById(R.id.button);
         ListView lv = (ListView) findViewById(R.id.list);
+        ImageView imageView6 =(ImageView)findViewById(R.id.imageView6);
        /* lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -138,6 +140,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        imageView6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mLayout.setPanelState(SlidingUpPanelLayout.PanelState.EXPANDED);
+            }
+        });
+
        /* TextView t = (TextView)findViewById(R.id.name);
         t.setText("List");*/
     }
@@ -167,6 +176,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 // Log.d("text",query); -> query 찍힘
+                mLayout.setPanelState(SlidingUpPanelLayout.PanelState.EXPANDED);
                 searchView.clearFocus();
                 return true;
             }
